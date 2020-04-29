@@ -1,0 +1,12 @@
+{
+    "layouts": {
+        "FloorSwitcher": {
+            "childLayouts": [],
+            "label": "Floor Switcher",
+            "controls": {},
+            "relatedStringKeys": [
+                "hello"
+            ]
+        }
+    }
+}

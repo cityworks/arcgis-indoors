@@ -1,0 +1,14 @@
+{
+    "isBuiltIn": true,
+    "name": "default",
+    "pluginName": "FloorSwitcher",
+    "pluginUid": "d7397f5227f439740a7d22d3a2e36bd2683d5d9caef2e65e",
+    "pluginVersion": "1.0.0",
+    "layouts": {
+        "FloorSwitcher": {
+            "strings": {
+                "hello": "world"
+            }
+        }
+    }
+}

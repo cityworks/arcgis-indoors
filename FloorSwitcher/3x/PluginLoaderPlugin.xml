@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<pluginLayout xmlns="http://www.azteca.com/cityworks/layout/pluginLayout">
-  <messages>
-    <message id="FloorSwitcherTool" title="Floor Switcher">
-      <value>custom/floorSwitcherTool</value>
-    </message>
-  </messages>
-</pluginLayout>

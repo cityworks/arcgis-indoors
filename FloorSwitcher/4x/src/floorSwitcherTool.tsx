@@ -6,7 +6,7 @@ import SceneView = require('esri/views/SceneView');
 import Widget = require('esri/widgets/Widget');
 import watchUtils = require('esri/core/watchUtils');
 
-import { declared, property, subclass } from 'esri/core/accessorSupport/decorators';
+import { property, subclass } from 'esri/core/accessorSupport/decorators';
 import { renderable, tsx, storeNode } from 'esri/widgets/support/widget';
 
 import { ICwMapHelper } from '@cw-map/map/dist/cw-map-helper';
@@ -18,7 +18,7 @@ const CSS = {
 };
 
 @subclass('esri.widgets.FloorSwitcherTool')
-class FloorSwitcherTool extends declared(Widget) {
+class FloorSwitcherTool extends Widget {
     //--------------------------------------------------------------------------
     //
     //  Lifecycle

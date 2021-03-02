@@ -1,9 +1,10 @@
 {
     "EntryPoint": "floorSwitcherTool.js",
+    "Description": "This widget lets you use the ArcGIS API for JavaScript ArcGIS Indoors widget to view a selected facility (building) and level (floor). See https://github.com/Esri/indoors-floor-filter-js for more information about the ArcGIS Indoors widget.",
     "IsBuiltIn": false,
-    "Name": "FloorSwitcher",
+    "Name": "Floor Switcher",
     "Supports2d": true,
     "Supports3d": false,
     "Uid": "d7397f5227f439740a7d22d3a2e36bd2683d5d9caef2e65e",
-    "Version": "1.0.0"
+    "Version": "2.0.0"
 }

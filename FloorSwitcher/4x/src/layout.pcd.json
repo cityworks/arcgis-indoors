@@ -2,11 +2,9 @@
     "layouts": {
         "FloorSwitcher": {
             "childLayouts": [],
-            "label": "Floor Switcher",
+            "label": "default",
             "controls": {},
-            "relatedStringKeys": [
-                "hello"
-            ]
+            "relatedStringKeys": []
         }
     }
 }

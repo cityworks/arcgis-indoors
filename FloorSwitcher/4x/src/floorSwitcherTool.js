@@ -1,39 +1,14 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-define(["require", "exports", "esri/core/Handles", "esri/widgets/Widget", "dojo/dom-construct", "esri/core/watchUtils", "esri/core/accessorSupport/decorators", "esri/widgets/support/widget"], function (require, exports, Handles, Widget, domConstruct, watchUtils, decorators_1, widget_1) {
+define(["require", "exports", "tslib", "dojo/dom-construct", "esri/core/Handles", "esri/widgets/Widget", "esri/core/watchUtils", "esri/core/accessorSupport/decorators", "esri/widgets/support/widget"], function (require, exports, tslib_1, domConstruct, Handles, Widget, watchUtils, decorators_1, widget_1) {
     "use strict";
-    var FloorSwitcherTool = /** @class */ (function (_super) {
-        __extends(FloorSwitcherTool, _super);
-        //--------------------------------------------------------------------------
-        //
-        //  Lifecycle
-        //
-        //--------------------------------------------------------------------------
+    var CSS = {
+        widgetIcon: 'esri-icon-checkbox-unchecked'
+    };
+    var FloorSwitcherTool = (function (_super) {
+        tslib_1.__extends(FloorSwitcherTool, _super);
         function FloorSwitcherTool() {
             var _this = _super.call(this) || this;
-            //--------------------------------------------------------------------------
-            //
-            //  Variables
-            //
-            //--------------------------------------------------------------------------
             _this._handles = new Handles();
+            _this.iconClass = CSS.widgetIcon;
             _this._onMapHelperChange = _this._onMapHelperChange.bind(_this);
             return _this;
         }
@@ -52,16 +27,6 @@ define(["require", "exports", "esri/core/Handles", "esri/widgets/Widget", "dojo/
             this._handles.destroy();
             this._handles = null;
         };
-        //--------------------------------------------------------------------------
-        //
-        //  renderable properties - will update ui when changed
-        //
-        //--------------------------------------------------------------------------
-        //--------------------------------------------------------------------------
-        //
-        //  Private Methods
-        //
-        //--------------------------------------------------------------------------
         FloorSwitcherTool.prototype._getCustomString = function (key) {
             return this.layout && this.layout.strings && this.layout.strings[key] ? this.layout.strings[key] : key;
         };
@@ -72,11 +37,9 @@ define(["require", "exports", "esri/core/Handles", "esri/widgets/Widget", "dojo/
         };
         FloorSwitcherTool.prototype._onFloorFilterDivChange = function () {
             if (this.floorFilterDiv && !this._floorFilter) {
-                // create floorFilter
                 this._floorFilter = this._createFloorFilter(this.floorFilterDiv);
             }
             else if (this.floorFilterDiv && this._floorFilter) {
-                // update rendering node
                 domConstruct.place(this._floorFilter['domNode'], this.floorFilterDiv);
             }
         };
@@ -107,30 +70,30 @@ define(["require", "exports", "esri/core/Handles", "esri/widgets/Widget", "dojo/
             }
             return null;
         };
-        __decorate([
+        tslib_1.__decorate([
             decorators_1.property()
         ], FloorSwitcherTool.prototype, "basePath", void 0);
-        __decorate([
+        tslib_1.__decorate([
             decorators_1.property()
         ], FloorSwitcherTool.prototype, "iconClass", void 0);
-        __decorate([
+        tslib_1.__decorate([
             decorators_1.property()
         ], FloorSwitcherTool.prototype, "view", void 0);
-        __decorate([
+        tslib_1.__decorate([
             decorators_1.property(),
             widget_1.renderable()
         ], FloorSwitcherTool.prototype, "mapHelper", void 0);
-        __decorate([
+        tslib_1.__decorate([
             decorators_1.property(),
             widget_1.renderable()
         ], FloorSwitcherTool.prototype, "layout", void 0);
-        __decorate([
+        tslib_1.__decorate([
             decorators_1.property()
         ], FloorSwitcherTool.prototype, "floorFilterDiv", void 0);
-        FloorSwitcherTool = __decorate([
+        FloorSwitcherTool = tslib_1.__decorate([
             decorators_1.subclass('esri.widgets.FloorSwitcherTool')
         ], FloorSwitcherTool);
         return FloorSwitcherTool;
-    }(decorators_1.declared(Widget)));
+    }(Widget));
     return FloorSwitcherTool;
 });
